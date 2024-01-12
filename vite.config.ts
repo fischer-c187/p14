@@ -13,6 +13,8 @@ export default defineConfig({
     alias: {
       "@components": path.resolve(__dirname, "src/Components"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@pages": path.resolve(__dirname, "src/Pages"),
+      "@layouts": path.resolve(__dirname, "src/Layouts"),
     },
   },
   test: {

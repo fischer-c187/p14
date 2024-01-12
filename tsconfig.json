@@ -23,7 +23,9 @@
     /* Aliases */
     "paths": {
       "@components/*": ["./src/Components/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@hooks/*": ["./src/hooks/*"],
+      "@pages/*": ["./src/Pages/*"],
+      "@layouts/*": ["./src/Layouts/*"]
     }
   },
   "include": ["src", "setupTests.ts"],
