@@ -22,6 +22,8 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
     "no-console": "warn", // Transforme les console.log en avertissements
     "react/react-in-jsx-scope": "off", // Désactive la règle nécessitant React dans la portée pour JSX, nécessaire pour React 17+
     "@typescript-eslint/no-unused-vars": "warn", // Transforme les variables inutilisées en avertissements plutôt qu'en erreurs
