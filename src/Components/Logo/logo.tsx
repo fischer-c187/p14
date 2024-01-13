@@ -10,7 +10,7 @@ function Logo({ logo, companyNameDisplaying = "" }: LogoProps) {
     <Link className='flex items-center gap-3' to='/'>
       <img
         src={logo}
-        alt='hrnet logo'
+        alt='company logo'
         aria-hidden='true'
         className=' w-8 h-full'
       />
