@@ -9,13 +9,16 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest run",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start-dev:docker": "docker compose -f docker-compose.dev.yml up -d",
+    "stop-dev:docker": "docker compose -f docker-compose.dev.yml down"
   },
   "dependencies": {
     "@types/node": "^20.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.2"
+    "react-router-dom": "^6.21.2",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.2.0",
