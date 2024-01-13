@@ -1,11 +1,14 @@
-import { DefaultNavItem, DefaultNavItems } from "../../Types/navigation";
+import { DefaultNavItem } from "../../Types/navigation";
 
-type NavigationProps = {
-  navItems: DefaultNavItems;
-  RenderItem: React.ComponentType<{ item: DefaultNavItem }>;
+type NavigationProps<T extends DefaultNavItem> = {
+  navItems: T[];
+  RenderItem: React.ComponentType<{ item: T }>;
 };
 
-function Navigation({ navItems, RenderItem }: NavigationProps) {
+function Navigation<T extends DefaultNavItem>({
+  navItems,
+  RenderItem,
+}: NavigationProps<T>) {
   return (
     <nav>
       <ul className='flex gap-8'>

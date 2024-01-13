@@ -1,6 +1,6 @@
-import { DefaultNavItems } from "../Types/navigation";
+import { NavigationElementsType } from "../Types/navigation";
 
-const navigationElements: DefaultNavItems = [
+const navigationElements: NavigationElementsType = [
   {
     id: 1,
     label: "Home",

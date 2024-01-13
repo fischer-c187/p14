@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { DefaultNavItem } from "../../Types/navigation";
+import { NavigationElementType } from "../../Types/navigation";
 
 type NavItemProps = {
-  item: DefaultNavItem;
+  item: NavigationElementType;
 };
 
 function NavItem({ item }: NavItemProps) {
