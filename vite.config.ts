@@ -22,7 +22,16 @@ export default defineConfig({
     setupFiles: "./test/setupTests.ts",
     coverage: {
       provider: "v8",
-      exclude: [...configDefaults.exclude],
+      exclude: [
+        ...configDefaults.exclude,
+        "test/**/*",
+        ".eslintrc.cjs",
+        "*.config.js",
+        "src/vite-env.d.ts",
+        "src/main.tsx",
+        "src/App.tsx",
+        "src/Types/**/*",
+      ],
     },
   },
 });
