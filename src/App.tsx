@@ -1,7 +1,9 @@
-import Welcome from "@components/Welcome/Welcome";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import routes from "./routes";
 
 function App() {
-  return <Welcome />;
+  return <RouterProvider router={createBrowserRouter(routes)} />;
 }
 
 export default App;

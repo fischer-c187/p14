@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -23,9 +24,11 @@
     /* Aliases */
     "paths": {
       "@components/*": ["./src/Components/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@hooks/*": ["./src/hooks/*"],
+      "@pages/*": ["./src/Pages/*"],
+      "@layouts/*": ["./src/Layouts/*"]
     }
   },
-  "include": ["src", "setupTests.ts"],
+  "include": ["src", "test/setupTests.ts", "test/router.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
