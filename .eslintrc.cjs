@@ -27,5 +27,6 @@ module.exports = {
     "no-console": "warn", // Transforme les console.log en avertissements
     "react/react-in-jsx-scope": "off", // Désactive la règle nécessitant React dans la portée pour JSX, nécessaire pour React 17+
     "@typescript-eslint/no-unused-vars": "warn", // Transforme les variables inutilisées en avertissements plutôt qu'en erreurs
+    "react/jsx-props-no-spreading": "off", // Autorise la propagation des props
   },
 };
