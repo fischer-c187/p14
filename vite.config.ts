@@ -40,6 +40,7 @@ export default defineConfig({
         "src/main.tsx",
         "src/App.tsx",
         "src/Types/**/*",
+        "src/constants/**/*",
       ],
     },
   },
