@@ -1,0 +1,288 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AddEmployee > should match the snapshot 1`] = `
+<div>
+  <form
+    class="space-y-8 m-auto lg:w-2/3  min-w-80  w-5/6"
+  >
+    <div
+      class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+      data-testid="form-raw"
+    >
+      <div
+        class="flex flex-col gap-2 w-full"
+        data-testid="formFieldWithLabel"
+      >
+        <label
+          class="text-gray-700 font-medium text-sm w-fit"
+          for="firstName"
+        >
+          First Name
+        </label>
+        <input
+          class="border py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-citron-600 focus:border-transparent"
+          id="firstName"
+          name="firstName"
+          placeholder="John"
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full"
+        data-testid="formFieldWithLabel"
+      >
+        <label
+          class="text-gray-700 font-medium text-sm w-fit"
+          for="lastName"
+        >
+          Last Name
+        </label>
+        <input
+          class="border py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-citron-600 focus:border-transparent"
+          id="lastName"
+          name="lastName"
+          placeholder="Doe"
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+      data-testid="form-raw"
+    >
+      <div
+        class="flex flex-col gap-2 w-full"
+        data-testid="formFieldWithLabel"
+      >
+        <label
+          class="text-gray-700 font-medium text-sm w-fit"
+          for="birthDate"
+        >
+          Birth of Date
+        </label>
+        <div
+          class="_inputWrapper_rkpbb_1"
+          data-testid="datepicker"
+        >
+          <input
+            class="border w-full py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-hrnet-green focus:border-transparent"
+            data-testid="dateInput"
+            id="birthDate"
+            name="birthDate"
+            placeholder="MM/dd/YYYY"
+            required=""
+            tabindex="0"
+            title="Enter the date in this format: MM/DD/YYYY or MM-DD-YYYY"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2 w-full"
+        data-testid="formFieldWithLabel"
+      >
+        <label
+          class="text-gray-700 font-medium text-sm w-fit"
+          for="startDate"
+        >
+          Start Date
+        </label>
+        <div
+          class="_inputWrapper_rkpbb_1"
+          data-testid="datepicker"
+        >
+          <input
+            class="border w-full py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-hrnet-green focus:border-transparent"
+            data-testid="dateInput"
+            id="startDate"
+            name="startDate"
+            placeholder="MM/dd/YYYY"
+            required=""
+            tabindex="0"
+            title="Enter the date in this format: MM/DD/YYYY or MM-DD-YYYY"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <fieldset
+      class="pt-0 pb-8 space-y-8 bg-gray-200 border-y-4 border-gray-300"
+    >
+      <legend
+        class="text-lg font-medium ml-4 bg-hrnet-green text-white px-2"
+      >
+        Address
+      </legend>
+      <div
+        class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+        data-testid="form-raw"
+      >
+        <div
+          class="flex flex-col gap-2 w-full"
+          data-testid="formFieldWithLabel"
+        >
+          <label
+            class="text-gray-700 font-medium text-sm w-fit"
+            for="street"
+          >
+            Street
+          </label>
+          <input
+            class="border py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-citron-600 focus:border-transparent"
+            id="street"
+            name="street"
+            placeholder="123 Main St."
+            type="text"
+          />
+        </div>
+        <div
+          class="flex flex-col gap-2 w-full"
+          data-testid="formFieldWithLabel"
+        >
+          <label
+            class="text-gray-700 font-medium text-sm w-fit"
+            for="city"
+          >
+            City
+          </label>
+          <input
+            class="border py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-citron-600 focus:border-transparent"
+            id="city"
+            name="city"
+            placeholder="New York"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+        data-testid="form-raw"
+      >
+        <div
+          class="flex flex-col gap-2 w-full"
+          data-testid="formFieldWithLabel"
+        >
+          <label
+            class="text-gray-700 font-medium text-sm w-fit"
+            for="state"
+          >
+            State
+          </label>
+          <div
+            class="relative"
+            data-testid="dropdownWrapper"
+            role="button"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-between rounded-md border px-5 py-2 shadow-sm border-gray-300 bg-white text-gray-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-citron-600 group-focus:focus:ring-citron-600"
+              data-testid="dropdownBtn"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="mr-4"
+              >
+                Alabama
+              </span>
+              <img
+                alt="icon"
+                class="fill-gray-500 transition-transform"
+                src="/src/assets/angle-up-solid.svg"
+              />
+            </div>
+            <input
+              class="sr-only"
+              id="state"
+              name="state"
+              type="text"
+              value="alabama"
+            />
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-2 w-full"
+          data-testid="formFieldWithLabel"
+        >
+          <label
+            class="text-gray-700 font-medium text-sm w-fit"
+            for="zipCode"
+          >
+            Zip Code
+          </label>
+          <input
+            class="border py-2 px-3 rounded-md  border-gray-300 focus:outline-none focus:ring-2 focus:ring-citron-600 focus:border-transparent"
+            id="zipCode"
+            name="zipCode"
+            pattern="^\\d{5}(-\\d{4})?$"
+            placeholder="New York"
+            type="text"
+          />
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+      data-testid="form-raw"
+    >
+      <div
+        class="flex flex-col gap-2 w-full row-span-2"
+        data-testid="formFieldWithLabel"
+      >
+        <label
+          class="text-gray-700 font-medium text-sm w-fit"
+          for="department"
+        >
+          Department
+        </label>
+        <div
+          class="relative"
+          data-testid="dropdownWrapper"
+          role="button"
+          tabindex="-1"
+        >
+          <div
+            class="flex items-center justify-between rounded-md border px-5 py-2 shadow-sm border-gray-300 bg-white text-gray-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-citron-600 group-focus:focus:ring-citron-600"
+            data-testid="dropdownBtn"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="mr-4"
+            >
+              Sales
+            </span>
+            <img
+              alt="icon"
+              class="fill-gray-500 transition-transform"
+              src="/src/assets/angle-up-solid.svg"
+            />
+          </div>
+          <input
+            class="sr-only"
+            id="department"
+            name="department"
+            type="text"
+            value="sales"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="grid px-4 lg:px-8 justify-start gap-8 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2"
+      data-testid="form-raw"
+    >
+      <button
+        class="bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600"
+        type="submit"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>
+`;
