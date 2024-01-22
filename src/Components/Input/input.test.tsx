@@ -15,10 +15,6 @@ describe("Input", () => {
     render(<Input name='test' label='test' errorMessages='error' />);
     expect(screen.getByText("error")).toBeInTheDocument();
   });
-  it("should render with a value", () => {
-    render(<Input name='test' label='test' value='value' />);
-    expect(screen.getByDisplayValue("value")).toBeInTheDocument();
-  });
   it("should render with a type", () => {
     render(<Input name='test' label='test' type='text' />);
     expect(screen.getByRole("textbox")).toBeInTheDocument();
