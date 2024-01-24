@@ -4,7 +4,13 @@ module.exports = {
     browser: true,
     es2022: true,
   },
-  extends: ["airbnb", "airbnb-typescript", "airbnb/hooks", "prettier"],
+  extends: [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "prettier",
+  ],
   ignorePatterns: [
     "dist",
     "setupTests.ts",
