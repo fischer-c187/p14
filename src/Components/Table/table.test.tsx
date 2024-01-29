@@ -1,5 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { render, renderHook, screen } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
+import useSortedData from "@hooks/useSortedData";
+import userEvent from "@testing-library/user-event";
 import Table from "./table";
 import TableBody from "./tableBody";
 import TableHeader from "./tableHeader";
@@ -32,11 +34,13 @@ const testTableDescriptor: TableDescriptor<(typeof testMockData)[0]> = [
   {
     columnLabel: "test",
     accessor: (item) => item.test,
+    sort: "test",
     id: 1,
   },
   {
     columnLabel: "test two",
     accessor: (item) => item.two,
+    sort: "two",
     id: 2,
   },
 ];
@@ -101,5 +105,22 @@ describe("Table", () => {
     expect(bodyCell[5].textContent).toEqual("two2");
     expect(bodyCell[6].textContent).toEqual("test3");
     expect(bodyCell[7].textContent).toEqual("two3");
+  });
+
+  it("should call onColumnSort when header cell is clicked", async () => {
+    const onColumnSort = vi.fn();
+    const user = userEvent.setup();
+
+    render(
+      <Table>
+        <TableHeader
+          tableDescriptor={testTableDescriptor}
+          onColumnSort={onColumnSort}
+        />
+      </Table>
+    );
+    const headerCell = screen.queryAllByRole("columnheader");
+    await user.click(headerCell[0]);
+    expect(onColumnSort).toHaveBeenCalledWith("test");
   });
 });
