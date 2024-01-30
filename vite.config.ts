@@ -41,6 +41,7 @@ export default defineConfig({
         "src/App.tsx",
         "src/Types/**/*",
         "src/constants/**/*",
+        "**/*.validators.ts",
       ],
     },
   },
