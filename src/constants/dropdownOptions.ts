@@ -58,3 +58,11 @@ export const departmentChoices = [
   { value: "human resources", label: "Human Resources" },
   { value: "legal", label: "Legal" },
 ];
+
+export const nbrEntriesChoices = [
+  { value: "2", label: "2 entries" },
+  { value: "10", label: "10 entries" },
+  { value: "25", label: "25 entries" },
+  { value: "50", label: "50 entries" },
+  { value: "100", label: "100 entries" },
+];
