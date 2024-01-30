@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBar > should render expected snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="bg-glass bg-12-center bg-no-repeat h-10 px-5 pl-11 text-sm bg-white border-2 border-gray-300 rounded-md focus:border-transparent focus:outline-none focus:ring-2 focus:ring-citron-600 group-focus:focus:ring-citron-600"
+    placeholder="Search..."
+    type="text"
+  />
+</DocumentFragment>
+`;

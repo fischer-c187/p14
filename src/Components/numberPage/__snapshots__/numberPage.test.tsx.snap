@@ -1,0 +1,102 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NumberPage > should render expected snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="flex justify-center items-center gap-1"
+  >
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="1"
+        data-testid="pageenabled"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all cursor-default"
+        data-pagenumber="..."
+        data-testid="pagedisabled"
+        disabled=""
+        type="button"
+      >
+        ...
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="3"
+        data-testid="pageenabled"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="4"
+        data-testid="pageenabled"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm font-medium rounded-lg w-10 h-10 leading-none transition-all bg-citron-600 text-gray-100 hover:bg-citron-600"
+        data-pagenumber="5"
+        data-testid="pageenabled"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="6"
+        data-testid="pageenabled"
+        type="button"
+      >
+        6
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="7"
+        data-testid="pageenabled"
+        type="button"
+      >
+        7
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all cursor-default"
+        data-pagenumber="..."
+        data-testid="pagedisabled"
+        disabled=""
+        type="button"
+      >
+        ...
+      </button>
+    </li>
+    <li>
+      <button
+        class="p-3 text-sm text-gray-500 font-medium rounded-lg w-10 h-10 leading-none transition-all hover:bg-gray-200"
+        data-pagenumber="10"
+        data-testid="pageenabled"
+        type="button"
+      >
+        10
+      </button>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

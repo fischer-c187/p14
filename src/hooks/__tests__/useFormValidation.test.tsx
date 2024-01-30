@@ -5,12 +5,11 @@ import {
   renderHook,
   screen,
 } from "@testing-library/react";
-// import { act } from "react-dom/test-utils";
 
 import { FocusEvent } from "react";
 import { describe, expect, it, vi } from "vitest";
-import useFormValidation from "./useFormValidation";
-import ValidatorsType from "../Types/form";
+import useFormValidation from "../useFormValidation";
+import ValidatorsType from "../../Types/form";
 
 const validators = {
   test: {

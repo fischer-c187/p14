@@ -1,0 +1,218 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EmployeesTable > should render correctly with table header and table body 1`] = `
+<DocumentFragment>
+  <table
+    class="table-auto w-full"
+  >
+    <thead
+      class="border-b border-gray-200"
+    >
+      <tr
+        class="bg-gray-50"
+      >
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          First Name
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          Last Name
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          Start Date
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          Department
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          Date of Birth
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap"
+        >
+          Street
+          <img
+            alt="arrow"
+            aria-hidden="true"
+            class="inline-block ml-1 lg:ml-2 w-4 h-4"
+            src="/src/assets/arrow-down.svg"
+          />
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          City
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          State
+        </th>
+        <th
+          class="py-3 px-3 text-gray-500 font-semibold text-xs text-left lg:px-6 text-nowrap whitespace-nowrap cursor-pointer"
+        >
+          Zip Code
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="[&>*:nth-child(-n+2)]:text-gray-900 [&>*:nth-child(-n+2)]:font-medium border border-gray-200"
+      >
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Alice
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Smith
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          06-01-2010
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Sales
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          02-15-1985
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          123 Oak St
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Springfield
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          IL
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          62704
+        </td>
+      </tr>
+      <tr
+        class="[&>*:nth-child(-n+2)]:text-gray-900 [&>*:nth-child(-n+2)]:font-medium border border-gray-200"
+      >
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Bob
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Johnson
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          08-15-2012
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Marketing
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          07-22-1978
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          456 Maple St
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Riverside
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          CA
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          92501
+        </td>
+      </tr>
+      <tr
+        class="[&>*:nth-child(-n+2)]:text-gray-900 [&>*:nth-child(-n+2)]:font-medium border border-gray-200"
+      >
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Carol
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Williams
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          11-10-2014
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          HR
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          01-30-1990
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          789 Pine St
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          Greenfield
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          WI
+        </td>
+        <td
+          class="px-3 py-4 whitespace-nowrap text-xs text-gray-500 lg:text-sm lg:px-6"
+        >
+          53220
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

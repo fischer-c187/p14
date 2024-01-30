@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, forwardRef, useRef, useState } from "react";
 import useDisplayChildren from "@hooks/useDisplayChildren";
+import { twMerge } from "tailwind-merge";
 import DropdownOptions from "./DropdownOptions";
 import DropdownBtn from "./DropdownBtn";
 import extractElementFromEvent from "../../utils/event";
@@ -15,6 +16,7 @@ type DropdownProps = {
   options: Option[];
   onChange?: (value: string) => void;
   innerRef?: React.Ref<HTMLInputElement>;
+  classNameBtn?: string;
 } & ComponentPropsWithoutRef<"input">;
 
 function Dropdown({
@@ -23,6 +25,7 @@ function Dropdown({
   options,
   onChange,
   innerRef,
+  classNameBtn,
 }: DropdownProps) {
   const [selected, setSelected] = useState(optionPreSelected);
   const parentRef = useRef<HTMLDivElement>(null);
@@ -62,7 +65,10 @@ function Dropdown({
         open={displayChildren}
         onClick={handleToggleChildren}
         onKeyDown={keyboardDisplayManager}
-        className='border-gray-300 bg-white text-gray-500 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-citron-600 group-focus:focus:ring-citron-600'
+        className={twMerge(
+          "border-gray-300 bg-white focus:border-transparent focus:outline-none focus:ring-2 focus:ring-citron-600 group-focus:focus:ring-citron-600",
+          classNameBtn || " text-gray-500"
+        )}
       />
       {displayChildren && (
         <div className='absolute z-10 top-full mt-2  min-w-full'>
