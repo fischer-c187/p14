@@ -10,7 +10,7 @@ import {
   americanStateChoices,
   departmentChoices,
 } from "../../constants/dropdownOptions";
-import Validators from "./validators";
+import Validators from "./addEmployee.validators";
 
 function AddEmployee() {
   const [birthDate, setBirthDate] = useState("");
