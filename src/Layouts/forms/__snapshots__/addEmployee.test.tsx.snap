@@ -277,7 +277,7 @@ exports[`AddEmployee > should match the snapshot 1`] = `
       data-testid="form-raw"
     >
       <button
-        class="bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600"
+        class="items-center bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600"
         type="submit"
       >
         Save
