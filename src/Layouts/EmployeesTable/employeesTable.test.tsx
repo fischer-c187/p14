@@ -8,7 +8,7 @@ const data = [
   {
     firstName: "Alice",
     lastName: "Smith",
-    dateBirth: "02-15-1985",
+    birthDate: "02-15-1985",
     startDate: "06-01-2010",
     street: "123 Oak St",
     city: "Springfield",
@@ -20,7 +20,7 @@ const data = [
   {
     firstName: "Bob",
     lastName: "Johnson",
-    dateBirth: "07-22-1978",
+    birthDate: "07-22-1978",
     startDate: "08-15-2012",
     street: "456 Maple St",
     city: "Riverside",
@@ -32,7 +32,7 @@ const data = [
   {
     firstName: "Carol",
     lastName: "Williams",
-    dateBirth: "01-30-1990",
+    birthDate: "01-30-1990",
     startDate: "11-10-2014",
     street: "789 Pine St",
     city: "Greenfield",
@@ -46,7 +46,6 @@ const data = [
 describe("EmployeesTable", () => {
   it("should render correctly with table header and table body", () => {
     const { asFragment } = render(<EmployeesTable data={data} />);
-    screen.debug();
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -56,7 +55,6 @@ describe("EmployeesTable", () => {
     render(<EmployeesTable data={data} onColumnSort={onColumnSort} />);
 
     await user.click(screen.getByText("First Name"));
-    screen.debug();
     expect(onColumnSort).toHaveBeenCalledWith("firstName");
   });
 });
