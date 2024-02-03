@@ -1,17 +1,23 @@
-import { describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it, vi } from "vitest";
 import { cleanup, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { renderRoute } from "../../../test/router";
 
 describe("Root Layout", () => {
-  it("should display the header in all page", () => {
+  beforeAll(() => {
+    HTMLDialogElement.prototype.show = vi.fn();
+    HTMLDialogElement.prototype.showModal = vi.fn();
+    HTMLDialogElement.prototype.close = vi.fn();
+  });
+  it("should display the header in all page", async () => {
     renderRoute("/employee");
+
     expect(screen.getByTestId("employeePage")).toBeInTheDocument();
     expect(screen.getByTestId("header")).toBeInTheDocument();
     cleanup();
 
     renderRoute("/");
-    expect(screen.getByTestId("homePage")).toBeInTheDocument();
+    expect(await screen.findByTestId("homePage")).toBeInTheDocument();
     expect(screen.getByTestId("header")).toBeInTheDocument();
   });
 
