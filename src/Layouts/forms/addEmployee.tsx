@@ -171,6 +171,7 @@ function AddEmployee({
         <button
           type='submit'
           className='items-center bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600'
+          disabled={mutate.isPending}
         >
           {mutate.isPending ? (
             <Loader className='w-6 h-6 fill-white' text='Submitting...' />
