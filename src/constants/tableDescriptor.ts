@@ -28,8 +28,8 @@ const employeesTableDescriptor: TableDescriptor<Employee> = [
   },
   {
     columnLabel: "Date of Birth",
-    accessor: (item: Employee) => item.dateBirth,
-    sort: "dateBirth",
+    accessor: (item: Employee) => item.birthDate,
+    sort: "birthDate",
     id: 5,
   },
   {

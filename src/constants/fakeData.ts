@@ -4,7 +4,7 @@ const employees: ListEmployee = [
   {
     firstName: "Alice",
     lastName: "Smith",
-    dateBirth: "02-15-1985",
+    birthDate: "02-15-1985",
     startDate: "06-01-2010",
     street: "123 Oak St",
     city: "Springfield",
@@ -16,7 +16,7 @@ const employees: ListEmployee = [
   {
     firstName: "Bob",
     lastName: "Johnson",
-    dateBirth: "07-22-1978",
+    birthDate: "07-22-1978",
     startDate: "08-15-2012",
     street: "456 Maple St",
     city: "Riverside",
@@ -28,7 +28,7 @@ const employees: ListEmployee = [
   {
     firstName: "Carol",
     lastName: "Williams",
-    dateBirth: "01-30-1990",
+    birthDate: "01-30-1990",
     startDate: "11-10-2014",
     street: "789 Pine St",
     city: "Greenfield",
@@ -40,7 +40,7 @@ const employees: ListEmployee = [
   {
     firstName: "David",
     lastName: "Brown",
-    dateBirth: "05-17-1982",
+    birthDate: "05-17-1982",
     startDate: "03-23-2015",
     street: "101 Ash St",
     city: "Fairview",
@@ -52,7 +52,7 @@ const employees: ListEmployee = [
   {
     firstName: "Eve",
     lastName: "Davis",
-    dateBirth: "12-09-1975",
+    birthDate: "12-09-1975",
     startDate: "09-01-2016",
     street: "202 Birch St",
     city: "Harmony",
@@ -64,7 +64,7 @@ const employees: ListEmployee = [
   {
     firstName: "Frank",
     lastName: "Miller",
-    dateBirth: "03-14-1988",
+    birthDate: "03-14-1988",
     startDate: "07-19-2017",
     street: "303 Cedar St",
     city: "Liberty",
@@ -76,7 +76,7 @@ const employees: ListEmployee = [
   {
     firstName: "Grace",
     lastName: "Wilson",
-    dateBirth: "08-20-1992",
+    birthDate: "08-20-1992",
     startDate: "02-05-2018",
     street: "404 Elm St",
     city: "Victory",
@@ -88,7 +88,7 @@ const employees: ListEmployee = [
   {
     firstName: "Henry",
     lastName: "Moore",
-    dateBirth: "06-30-1980",
+    birthDate: "06-30-1980",
     startDate: "04-12-2019",
     street: "505 Fir St",
     city: "Prosperity",
@@ -100,7 +100,7 @@ const employees: ListEmployee = [
   {
     firstName: "Ivy",
     lastName: "Taylor",
-    dateBirth: "10-22-1993",
+    birthDate: "10-22-1993",
     startDate: "12-07-2020",
     street: "606 Spruce St",
     city: "Unity",
@@ -112,7 +112,7 @@ const employees: ListEmployee = [
   {
     firstName: "Jack",
     lastName: "Anderson",
-    dateBirth: "01-11-1979",
+    birthDate: "01-11-1979",
     startDate: "05-20-2021",
     street: "707 Cherry St",
     city: "Hope",
@@ -124,7 +124,7 @@ const employees: ListEmployee = [
   {
     firstName: "Kathy",
     lastName: "Thomas",
-    dateBirth: "04-03-1986",
+    birthDate: "04-03-1986",
     startDate: "08-15-2022",
     street: "808 Oak St",
     city: "Springfield",
@@ -136,7 +136,7 @@ const employees: ListEmployee = [
   {
     firstName: "Leo",
     lastName: "Jackson",
-    dateBirth: "11-13-1991",
+    birthDate: "11-13-1991",
     startDate: "01-06-2023",
     street: "909 Maple St",
     city: "Riverside",
@@ -148,7 +148,7 @@ const employees: ListEmployee = [
   {
     firstName: "Mia",
     lastName: "White",
-    dateBirth: "07-27-1984",
+    birthDate: "07-27-1984",
     startDate: "06-22-2024",
     street: "1010 Pine St",
     city: "Greenfield",
@@ -160,7 +160,7 @@ const employees: ListEmployee = [
   {
     firstName: "Noah",
     lastName: "Harris",
-    dateBirth: "09-15-1976",
+    birthDate: "09-15-1976",
     startDate: "03-30-2025",
     street: "1111 Ash St",
     city: "Fairview",
@@ -172,7 +172,7 @@ const employees: ListEmployee = [
   {
     firstName: "Olivia",
     lastName: "Martin",
-    dateBirth: "02-06-1994",
+    birthDate: "02-06-1994",
     startDate: "10-08-2026",
     street: "1212 Birch St",
     city: "Harmony",
