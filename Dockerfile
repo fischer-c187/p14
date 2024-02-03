@@ -5,6 +5,8 @@ COPY ./package.json ./package-lock.json ./
 RUN npm ci
 
 COPY . .
+ENV VITE_BACKEND_URL=hrnet-back:3000
+ENV VITE_MODE_API=BACKEND
 RUN npm run build
 
 FROM nginx:stable-alpine
