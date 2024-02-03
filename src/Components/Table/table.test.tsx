@@ -1,6 +1,5 @@
-import { render, renderHook, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import useSortedData from "@hooks/useSortedData";
 import userEvent from "@testing-library/user-event";
 import Table from "./table";
 import TableBody from "./tableBody";

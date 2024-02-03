@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import fetchEmployees from "../utils/fakeApi";
+import { selectFetchEmployeesStrategy } from "../utils/api";
 
 function useFetchEmployees() {
   return useQuery({
     queryKey: ["employees"],
-    queryFn: () => fetchEmployees(),
+    queryFn: selectFetchEmployeesStrategy(),
   });
 }
 

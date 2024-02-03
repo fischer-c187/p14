@@ -28,7 +28,6 @@ describe("FilterBar", () => {
         setSearch={setSearch}
       />
     );
-    screen.debug();
     expect(screen.getByPlaceholderText("Search...")).toBeInTheDocument();
     expect(screen.getByTestId("dropdownBtn")).toBeInTheDocument();
   });
@@ -46,7 +45,6 @@ describe("FilterBar", () => {
 
     await user.click(screen.getByTestId("dropdownBtn"));
     await user.click(screen.getByText("10"));
-    screen.debug();
     expect(setEntriesChoices).toHaveBeenCalledWith(10);
   });
 });

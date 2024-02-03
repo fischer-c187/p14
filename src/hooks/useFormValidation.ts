@@ -44,16 +44,26 @@ function useFormValidation(validators: ValidatorsType) {
   );
 
   const validateForm = () => {
+    let formIsValid = true;
+
     const newErrors = Object.entries(refs).reduce(
       (acc: ErrorsObject, [name, element]) => {
-        acc[name] = {
-          message: validateField(name, (element as HTMLInputElement).value),
-        };
+        const errorMessage = validateField(
+          name,
+          (element as HTMLInputElement).value
+        );
+
+        if (errorMessage) {
+          formIsValid = false;
+        }
+
+        acc[name] = { message: errorMessage };
         return acc;
       },
       {}
     );
     setErrors(newErrors);
+    return formIsValid;
   };
 
   const setRef = useCallback(

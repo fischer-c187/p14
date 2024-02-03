@@ -30,6 +30,5 @@
     }
   },
   "include": ["src", "test/setupTests.ts", "test/router.tsx"],
-  "exclude": ["**/*.test.tsx", "**/*.spec.tsx", "test/**/*", "**/*.test.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

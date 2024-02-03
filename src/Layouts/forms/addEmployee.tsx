@@ -1,36 +1,65 @@
 import { DropdownWithRef } from "@components/Dropdown/Dropdown";
+import FormFieldWithLabel from "@components/FormFieldWithLabel/formFieldWithLabel";
 import FormRaw from "@components/FormRaw/formRaw";
 import { InputWithRef } from "@components/Input/input";
-import { useState } from "react";
-import FormFieldWithLabel from "@components/FormFieldWithLabel/formFieldWithLabel";
-import useFormValidation from "@hooks/useFormValidation";
-import { DatepickerWithRef } from "@drskyjs/datepicker/dist/components/Datepicker/Datepicker";
+import Loader from "@components/Loader/loader";
+
 import { Datepicker } from "@drskyjs/datepicker";
+import { DatepickerWithRef } from "@drskyjs/datepicker/dist/components/Datepicker/Datepicker";
+
+import useFormValidation from "@hooks/useFormValidation";
+import usePostEmployee from "@hooks/usePostEmployee";
+
+import { useRef, useState } from "react";
+
+import { EmployeeForm } from "../../Types/api";
 import {
   americanStateChoices,
   departmentChoices,
 } from "../../constants/dropdownOptions";
 import Validators from "./addEmployee.validators";
 
-function AddEmployee() {
-  const [birthDate, setBirthDate] = useState("");
+type AddEmployeeProps = {
+  onSuccessfulSubmission: () => void;
+  onFailedSubmission: () => void;
+};
+
+function AddEmployee({
+  onSuccessfulSubmission,
+  onFailedSubmission,
+}: AddEmployeeProps) {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [birthDate, setbirthDate] = useState("");
   const [startDate, setStartDate] = useState("");
 
   const { errors, register, validateForm } = useFormValidation(Validators);
+  const mutate = usePostEmployee();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const data = Object.fromEntries(formData);
-    validateForm();
-    // eslint-disable-next-line no-console
-    console.log(data);
+    const data = Object.fromEntries(formData) as EmployeeForm;
+
+    if (validateForm()) {
+      mutate.mutate(data, {
+        onSuccess: () => {
+          setbirthDate("");
+          setStartDate("");
+          formRef.current?.reset();
+          onSuccessfulSubmission();
+        },
+        onError: () => {
+          onFailedSubmission();
+        },
+      });
+    }
   }
 
   return (
     <form
       onSubmit={handleSubmit}
       className='space-y-8 m-auto lg:w-2/3  min-w-80  w-5/6'
+      ref={formRef}
     >
       <FormRaw>
         <InputWithRef
@@ -63,7 +92,7 @@ function AddEmployee() {
             id='birthDate'
             name='birthDate'
             date={birthDate}
-            updateDateState={setBirthDate}
+            updateDateState={setbirthDate}
             placeholder='MM/dd/YYYY'
             {...register("birthDate")}
             required
@@ -141,9 +170,14 @@ function AddEmployee() {
       <FormRaw>
         <button
           type='submit'
-          className='bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600'
+          className='items-center bg-hrnet-green col-span-2 row-span-2 justify-self-center mt-4 text-white py-2 px-4 rounded-md hover:bg-hrnet-green-600'
+          disabled={mutate.isPending}
         >
-          Save
+          {mutate.isPending ? (
+            <Loader className='w-6 h-6 fill-white' text='Submitting...' />
+          ) : (
+            "Save"
+          )}
         </button>
       </FormRaw>
     </form>
