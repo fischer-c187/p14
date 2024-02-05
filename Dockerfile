@@ -5,7 +5,7 @@ COPY ./package.json ./package-lock.json ./
 RUN npm ci
 
 COPY . .
-ENV VITE_BACKEND_URL=hrnet-back:3000
+ENV VITE_BACKEND_URL=https://gitlab.drsky.ovh
 ENV VITE_MODE_API=BACKEND
 RUN npm run build
 
