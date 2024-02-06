@@ -32,6 +32,9 @@ export default {
       translate: {
         "negative-full": "-101%",
       },
+      margin: {
+        "screen-quarter": "25vh",
+      },
     },
   },
   plugins: [],
