@@ -2,11 +2,57 @@ import { EmployeeForm, ListEmployee } from "../Types/api";
 import employees from "../constants/fakeData";
 import { formatEmployeesData } from "./date";
 
-export function fetchEmployeesMocked(): Promise<ListEmployee> {
+const EMPLOYEES_KEY = "employees";
+
+function generateId() {
+  return `${Date.now().toString(36)}_${Math.random()
+    .toString(36)
+    .substring(2)}`;
+}
+
+function getEmployeesInLocalStorage() {
+  try {
+    let listEmployee = localStorage.getItem(EMPLOYEES_KEY);
+    if (!listEmployee) {
+      localStorage.setItem(EMPLOYEES_KEY, JSON.stringify(employees));
+      listEmployee = localStorage.getItem(EMPLOYEES_KEY);
+    }
+    return JSON.parse(listEmployee || "[]"); // Assure un tableau vide par défaut si `listEmployee` est `null`
+  } catch (error) {
+    console.error(`Error parsing employees from local storage ${error}`);
+    throw new Error(`Error parsing employees from local storage ${error}`);
+  }
+}
+
+function postEmployeeInLocalStorage(employee: EmployeeForm) {
+  try {
+    const listEmployee = getEmployeesInLocalStorage();
+    const employeeWithId = { ...employee, id: generateId() };
+
+    listEmployee.push(employeeWithId);
+    localStorage.setItem(EMPLOYEES_KEY, JSON.stringify(listEmployee));
+    return employeeWithId;
+  } catch (error) {
+    console.error(`Error posting employee in local storage ${error}`);
+    throw new Error(`Error posting employee in local storage ${error}`);
+  }
+}
+
+function fetchEmployeesMocked(): Promise<ListEmployee> {
   const delay = 1000;
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(employees);
+      const listEmployee = getEmployeesInLocalStorage();
+      resolve(formatEmployeesData(listEmployee));
+    }, delay);
+  });
+}
+
+async function postEmployeeMocked(employee: EmployeeForm) {
+  const delay = 1000;
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(postEmployeeInLocalStorage(employee));
     }, delay);
   });
 }
@@ -42,4 +88,10 @@ export function selectFetchEmployeesStrategy() {
   return import.meta.env.VITE_MODE_API === "BACKEND"
     ? fetchEmployeeApi
     : fetchEmployeesMocked;
+}
+
+export function selectPostEmployeeStrategy() {
+  return import.meta.env.VITE_MODE_API === "BACKEND"
+    ? postEmployeeApi
+    : postEmployeeMocked;
 }

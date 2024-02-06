@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
-import { postEmployeeApi } from "../utils/api";
+import { selectPostEmployeeStrategy } from "../utils/api";
 
 function usePostEmployee() {
   const mutation = useMutation({
-    mutationFn: postEmployeeApi,
+    mutationFn: selectPostEmployeeStrategy(),
   });
 
   return mutation;
