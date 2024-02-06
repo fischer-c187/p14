@@ -40,7 +40,7 @@ function postEmployeeInLocalStorage(employee: EmployeeForm) {
 
 function fetchEmployeesMocked(): Promise<ListEmployee> {
   const delay = 1000;
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       const listEmployee = getEmployeesInLocalStorage();
       resolve(formatEmployeesData(listEmployee));
@@ -51,7 +51,7 @@ function fetchEmployeesMocked(): Promise<ListEmployee> {
 
 async function postEmployeeMocked(employee: EmployeeForm) {
   const delay = 1000;
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(postEmployeeInLocalStorage(employee));
       // reject(new Error("Error posting employee"));
