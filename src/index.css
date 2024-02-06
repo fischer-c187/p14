@@ -6,6 +6,10 @@
   body {
     @apply font-inter min-w-80;
   }
+
+  #root {
+    @apply min-h-screen;
+  }
 }
 
 .dialog-backdrop::backdrop {
