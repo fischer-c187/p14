@@ -14,7 +14,8 @@ function NavItem({ item }: NavItemProps) {
         className={({ isActive }) =>
           twMerge(
             "after:block after:w-full after:h-1 after:bg-hrnet-green after:transition-transform after:duration-300",
-            !isActive && "after:translate-x-negative-full"
+            !isActive &&
+              "after:translate-x-negative-full hover:after:translate-x-0"
           )
         }
       >
