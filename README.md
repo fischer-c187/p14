@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# HRnet Project
 
-Currently, two official plugins are available:
+Welcome to the HRnet project repository. HRnet is a modern web application for managing employee records efficiently. This application has been refactored to utilize React, enhancing its performance and user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+First, clone the repository to your local machine:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+```bash
+git clone https://github.com/fischer-c187/p14.git
+cd hrnet
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, install the project dependencies:
+
+```bash
+npm install
+```
+
+### Running the Project
+
+#### Development Server
+
+To launch the Vite development server:
+
+```bash
+npm run dev
+```
+
+This command starts the development server, making the HRnet application accessible via `http://localhost:5173` or another port if 5173 is already in use.
+
+#### Dockerized Development Environment
+
+To start the development environment using Docker:
+
+```bash
+npm run start-dev:docker
+```
+
+To stop the Dockerized development environment:
+
+```bash
+npm run stop-dev:docker
+```
+
+These commands manage the development environment container, ensuring that your development setup is consistent and isolated.
+
+### Testing
+
+To execute tests and ensure your application's integrity:
+
+```bash
+npm run test
+```
+
+For test coverage:
+
+```bash
+npx vitest --coverage
+```
+
+These testing commands help maintain high code quality and detect issues early in the development process.
+
+### Building the Project
+
+For production deployment, build the project using:
+
+```bash
+npm run build
+```
+
+This command compiles the application into static files, ready for deployment to a production environment.
