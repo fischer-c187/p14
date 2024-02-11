@@ -5,6 +5,14 @@ Welcome to the HRnet project repository. HRnet is a modern web application for m
 
 ## Getting Started
 
+### Prerequisites
+
+Before cloning the project, ensure the following tools are installed and configured on your machine:
+Development Environment
+
+    Node.js: Version 20.x
+    npm: Version 10.x
+
 ### Installation
 
 First, clone the repository to your local machine:
